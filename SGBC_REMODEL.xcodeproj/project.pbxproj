@@ -25,9 +25,11 @@
 		84BFBDFC28D136D5001709F0 /* RecentSermonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDFA28D136D5001709F0 /* RecentSermonTableViewCell.swift */; };
 		84BFBDFD28D136D5001709F0 /* RecentSermonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BFBDFB28D136D5001709F0 /* RecentSermonTableViewCell.xib */; };
 		84BFBDFF28D152B9001709F0 /* SermonAudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDFE28D152B9001709F0 /* SermonAudioPlayerViewController.swift */; };
+		8E97CD2C004AD3376D219CB6 /* Pods_SGBC_REMODEL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995885F5964B1464CBD18E52 /* Pods_SGBC_REMODEL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041530EAD2C54643F6AB7804 /* Pods-SGBC_REMODEL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGBC_REMODEL.release.xcconfig"; path = "Target Support Files/Pods-SGBC_REMODEL/Pods-SGBC_REMODEL.release.xcconfig"; sourceTree = "<group>"; };
 		84BFBDCB28D0B71C001709F0 /* SGBC_REMODEL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGBC_REMODEL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFBDCE28D0B71C001709F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BFBDD028D0B71C001709F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 		84BFBDFA28D136D5001709F0 /* RecentSermonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSermonTableViewCell.swift; sourceTree = "<group>"; };
 		84BFBDFB28D136D5001709F0 /* RecentSermonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentSermonTableViewCell.xib; sourceTree = "<group>"; };
 		84BFBDFE28D152B9001709F0 /* SermonAudioPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonAudioPlayerViewController.swift; sourceTree = "<group>"; };
+		995885F5964B1464CBD18E52 /* Pods_SGBC_REMODEL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGBC_REMODEL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F63A39FAE9E646C122D842 /* Pods-SGBC_REMODEL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGBC_REMODEL.debug.xcconfig"; path = "Target Support Files/Pods-SGBC_REMODEL/Pods-SGBC_REMODEL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +59,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E97CD2C004AD3376D219CB6 /* Pods_SGBC_REMODEL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05B0D1BAAB79ACFB011521E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				995885F5964B1464CBD18E52 /* Pods_SGBC_REMODEL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06ED1F84D2C408B8191771B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9F63A39FAE9E646C122D842 /* Pods-SGBC_REMODEL.debug.xcconfig */,
+				041530EAD2C54643F6AB7804 /* Pods-SGBC_REMODEL.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84BFBDC228D0B71C001709F0 = {
 			isa = PBXGroup;
 			children = (
 				84BFBDCD28D0B71C001709F0 /* SGBC_REMODEL */,
 				84BFBDCC28D0B71C001709F0 /* Products */,
+				06ED1F84D2C408B8191771B2 /* Pods */,
+				05B0D1BAAB79ACFB011521E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84BFBDDF28D0B71E001709F0 /* Build configuration list for PBXNativeTarget "SGBC_REMODEL" */;
 			buildPhases = (
+				D1F4C0CA9B4326D8B6CEBD76 /* [CP] Check Pods Manifest.lock */,
 				84BFBDC728D0B71C001709F0 /* Sources */,
 				84BFBDC828D0B71C001709F0 /* Frameworks */,
 				84BFBDC928D0B71C001709F0 /* Resources */,
+				C1AFDD46BC0D93F47AFFCD93 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,6 +229,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C1AFDD46BC0D93F47AFFCD93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SGBC_REMODEL/Pods-SGBC_REMODEL-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SGBC_REMODEL/Pods-SGBC_REMODEL-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SGBC_REMODEL/Pods-SGBC_REMODEL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1F4C0CA9B4326D8B6CEBD76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SGBC_REMODEL-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84BFBDC728D0B71C001709F0 /* Sources */ = {
@@ -362,6 +430,7 @@
 		};
 		84BFBDE028D0B71E001709F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9F63A39FAE9E646C122D842 /* Pods-SGBC_REMODEL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -380,7 +449,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sgbc.SGBC-REMODEL";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgbc.sgbc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -390,6 +459,7 @@
 		};
 		84BFBDE128D0B71E001709F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 041530EAD2C54643F6AB7804 /* Pods-SGBC_REMODEL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -408,7 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sgbc.SGBC-REMODEL";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgbc.sgbc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
