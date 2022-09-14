@@ -19,9 +19,12 @@ class MediaViewController: UIViewController, UITableViewDelegate, UITableViewDat
         MediaTableView.register(UINib(nibName: "MediaTableViewCell", bundle: nil), forCellReuseIdentifier: "mediaidentifier")
         MediaTableView.delegate = self
         MediaTableView.dataSource = self
-    
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mediaTableViewGroups.count
@@ -41,7 +44,29 @@ class MediaViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return CGFloat(160)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "sermonsSegue", sender: self)
+    }
+    
+}
+    // Mark: - UImageView Extension
+
+extension UIImageView{
+    func load(url: URL){
+        DispatchQueue.global().async {[weak self] in
+            if let data = try? Data(contentsOf: url){
+                if let image = UIImage(data: data){
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
     
 
 
-}
+

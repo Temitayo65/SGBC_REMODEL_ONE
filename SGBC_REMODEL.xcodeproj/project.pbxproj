@@ -21,6 +21,10 @@
 		84BFBDF128D110E7001709F0 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDF028D110E7001709F0 /* MediaViewController.swift */; };
 		84BFBDF428D11337001709F0 /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDF228D11336001709F0 /* MediaTableViewCell.swift */; };
 		84BFBDF528D11337001709F0 /* MediaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BFBDF328D11336001709F0 /* MediaTableViewCell.xib */; };
+		84BFBDF728D12B7B001709F0 /* SermonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDF628D12B7B001709F0 /* SermonsViewController.swift */; };
+		84BFBDFC28D136D5001709F0 /* RecentSermonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDFA28D136D5001709F0 /* RecentSermonTableViewCell.swift */; };
+		84BFBDFD28D136D5001709F0 /* RecentSermonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BFBDFB28D136D5001709F0 /* RecentSermonTableViewCell.xib */; };
+		84BFBDFF28D152B9001709F0 /* SermonAudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDFE28D152B9001709F0 /* SermonAudioPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		84BFBDF028D110E7001709F0 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		84BFBDF228D11336001709F0 /* MediaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
 		84BFBDF328D11336001709F0 /* MediaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaTableViewCell.xib; sourceTree = "<group>"; };
+		84BFBDF628D12B7B001709F0 /* SermonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonsViewController.swift; sourceTree = "<group>"; };
+		84BFBDFA28D136D5001709F0 /* RecentSermonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSermonTableViewCell.swift; sourceTree = "<group>"; };
+		84BFBDFB28D136D5001709F0 /* RecentSermonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentSermonTableViewCell.xib; sourceTree = "<group>"; };
+		84BFBDFE28D152B9001709F0 /* SermonAudioPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonAudioPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,8 @@
 			children = (
 				84BFBDD228D0B71C001709F0 /* MainViewController.swift */,
 				84BFBDF028D110E7001709F0 /* MediaViewController.swift */,
+				84BFBDF628D12B7B001709F0 /* SermonsViewController.swift */,
+				84BFBDFE28D152B9001709F0 /* SermonAudioPlayerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -100,6 +110,8 @@
 				84BFBDE628D0D2A4001709F0 /* MainTableViewCell.xib */,
 				84BFBDF228D11336001709F0 /* MediaTableViewCell.swift */,
 				84BFBDF328D11336001709F0 /* MediaTableViewCell.xib */,
+				84BFBDFA28D136D5001709F0 /* RecentSermonTableViewCell.swift */,
+				84BFBDFB28D136D5001709F0 /* RecentSermonTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +197,7 @@
 				84BFBDD828D0B71E001709F0 /* Assets.xcassets in Resources */,
 				84BFBDE828D0D2A4001709F0 /* MainTableViewCell.xib in Resources */,
 				84BFBDF528D11337001709F0 /* MediaTableViewCell.xib in Resources */,
+				84BFBDFD28D136D5001709F0 /* RecentSermonTableViewCell.xib in Resources */,
 				84BFBDD628D0B71C001709F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,12 +211,15 @@
 			files = (
 				84BFBDD328D0B71C001709F0 /* MainViewController.swift in Sources */,
 				84BFBDCF28D0B71C001709F0 /* AppDelegate.swift in Sources */,
+				84BFBDFF28D152B9001709F0 /* SermonAudioPlayerViewController.swift in Sources */,
+				84BFBDFC28D136D5001709F0 /* RecentSermonTableViewCell.swift in Sources */,
 				84BFBDEB28D1066C001709F0 /* Datas.swift in Sources */,
 				84BFBDF128D110E7001709F0 /* MediaViewController.swift in Sources */,
 				84BFBDF428D11337001709F0 /* MediaTableViewCell.swift in Sources */,
 				84BFBDE728D0D2A4001709F0 /* MainTableViewCell.swift in Sources */,
 				84BFBDD128D0B71C001709F0 /* SceneDelegate.swift in Sources */,
 				84BFBDEF28D10699001709F0 /* SermonManager.swift in Sources */,
+				84BFBDF728D12B7B001709F0 /* SermonsViewController.swift in Sources */,
 				84BFBDED28D1067C001709F0 /* Sermons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

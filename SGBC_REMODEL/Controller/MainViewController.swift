@@ -19,6 +19,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         MainTableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "mainidentifier")
         MainTableView.delegate = self
         MainTableView.dataSource = self
+        tabBarController?.tabBar.isHidden = false
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,7 +45,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return CGFloat(160)
     }
     
-
 
 }
 

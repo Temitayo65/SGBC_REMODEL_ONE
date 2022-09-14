@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzt-yT-YHY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1994.2028985507247" y="-290.625"/>
+            <point key="canvasLocation" x="-2054" y="698"/>
         </scene>
         <!--Media View Controller-->
         <scene sceneID="8H0-zn-d1K">
@@ -106,11 +106,12 @@
                     <navigationItem key="navigationItem" id="xxY-d3-2JM"/>
                     <connections>
                         <outlet property="MediaTableView" destination="EtT-h6-Pff" id="h1i-Iv-V16"/>
+                        <segue destination="Oab-cC-G6T" kind="show" identifier="sermonsSegue" id="PHM-gw-lD5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEO-kJ-KFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2866.666666666667" y="439.95535714285711"/>
+            <point key="canvasLocation" x="1872" y="707"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Omk-mo-qhF">
@@ -129,7 +130,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujg-nu-xWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166.6666666666667" y="-290.625"/>
+            <point key="canvasLocation" x="-904" y="-24"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CzW-1g-tkX">
@@ -148,7 +149,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T75-3y-azg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="256.52173913043481" y="-290.625"/>
+            <point key="canvasLocation" x="175" y="-777"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XqI-ob-FVC">
@@ -168,12 +169,245 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qP3-oO-9So" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1994" y="440"/>
+            <point key="canvasLocation" x="1170" y="-24"/>
+        </scene>
+        <!--Sermons View Controller-->
+        <scene sceneID="26q-aR-Gxc">
+            <objects>
+                <viewController id="Oab-cC-G6T" customClass="SermonsViewController" customModule="SGBC_REMODEL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WGi-ta-98a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sermonsimage" translatesAutoresizingMaskIntoConstraints="NO" id="Ppk-n7-aZO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Eti-1O-swX"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="raP-7v-D29">
+                                <rect key="frame" x="0.0" y="133" width="414" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="xBc-Ar-65X">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH9-hH-VMy">
+                                <rect key="frame" x="112" y="79" width="85" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="hsh-2C-8xZ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Series"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znC-Xp-ROQ">
+                                <rect key="frame" x="311" y="79" width="85" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="ar5-hH-M87"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Speakers"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dc-LG-ewc">
+                                <rect key="frame" x="19" y="79" width="85" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="5Sl-CS-cHu"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Recent"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcd-wX-j00">
+                                <rect key="frame" x="216" y="79" width="85" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="nnL-dD-cMX"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Books"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8pZ-hE-gT8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lcd-wX-j00" firstAttribute="leading" secondItem="UH9-hH-VMy" secondAttribute="trailing" constant="19" id="46k-7N-C63"/>
+                            <constraint firstItem="raP-7v-D29" firstAttribute="trailing" secondItem="8pZ-hE-gT8" secondAttribute="trailing" id="5fG-R8-cLK"/>
+                            <constraint firstItem="raP-7v-D29" firstAttribute="top" secondItem="7dc-LG-ewc" secondAttribute="bottom" constant="23" id="C8i-jn-p8a"/>
+                            <constraint firstItem="znC-Xp-ROQ" firstAttribute="centerY" secondItem="lcd-wX-j00" secondAttribute="centerY" id="OAI-BX-6yo"/>
+                            <constraint firstItem="raP-7v-D29" firstAttribute="leading" secondItem="8pZ-hE-gT8" secondAttribute="leading" id="bgy-9o-Hor"/>
+                            <constraint firstItem="7dc-LG-ewc" firstAttribute="top" secondItem="Ppk-n7-aZO" secondAttribute="bottom" constant="-49" id="dp4-nk-oCx"/>
+                            <constraint firstItem="8pZ-hE-gT8" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="znC-Xp-ROQ" secondAttribute="trailing" symbolic="YES" id="fAU-lF-TjG"/>
+                            <constraint firstItem="UH9-hH-VMy" firstAttribute="leading" secondItem="7dc-LG-ewc" secondAttribute="trailing" constant="8" symbolic="YES" id="goj-hw-m3Y"/>
+                            <constraint firstAttribute="bottom" secondItem="raP-7v-D29" secondAttribute="bottom" id="lgA-9a-hzB"/>
+                            <constraint firstItem="Ppk-n7-aZO" firstAttribute="trailing" secondItem="8pZ-hE-gT8" secondAttribute="trailing" id="mj3-UF-Jpa"/>
+                            <constraint firstItem="UH9-hH-VMy" firstAttribute="centerY" secondItem="7dc-LG-ewc" secondAttribute="centerY" id="mph-FN-z6i"/>
+                            <constraint firstItem="znC-Xp-ROQ" firstAttribute="leading" secondItem="lcd-wX-j00" secondAttribute="trailing" constant="10" id="myR-By-HJV"/>
+                            <constraint firstItem="Ppk-n7-aZO" firstAttribute="leading" secondItem="7dc-LG-ewc" secondAttribute="trailing" constant="-104" id="rfu-Un-4Qc"/>
+                            <constraint firstItem="Ppk-n7-aZO" firstAttribute="top" secondItem="WGi-ta-98a" secondAttribute="top" id="tAL-5X-b6V"/>
+                            <constraint firstItem="lcd-wX-j00" firstAttribute="centerY" secondItem="UH9-hH-VMy" secondAttribute="centerY" id="vXX-tz-f9U"/>
+                            <constraint firstItem="7dc-LG-ewc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8pZ-hE-gT8" secondAttribute="leading" constant="15" id="xb9-d3-l9u"/>
+                            <constraint firstItem="Ppk-n7-aZO" firstAttribute="leading" secondItem="8pZ-hE-gT8" secondAttribute="leading" id="yYc-Rw-bly"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QPl-Oj-jIZ"/>
+                    <connections>
+                        <outlet property="SermonsHeaderImageView" destination="Ppk-n7-aZO" id="lwM-Sr-e8l"/>
+                        <outlet property="booksSermonButton" destination="lcd-wX-j00" id="YlW-VX-7Ti"/>
+                        <outlet property="recentSermonButton" destination="7dc-LG-ewc" id="vUW-hM-Trn"/>
+                        <outlet property="recentSermonsTableView" destination="raP-7v-D29" id="UYC-Qd-QNh"/>
+                        <outlet property="seriesSermonButton" destination="UH9-hH-VMy" id="WfL-WH-E0l"/>
+                        <outlet property="speakersSermonButton" destination="znC-Xp-ROQ" id="seE-l3-GDX"/>
+                        <outlet property="spinner" destination="xBc-Ar-65X" id="IVO-dJ-Mzy"/>
+                        <segue destination="htt-sB-Z8I" kind="show" identifier="playAudio" id="2DB-gm-a6G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffX-xC-3Jc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2679.7101449275365" y="705.80357142857144"/>
+        </scene>
+        <!--Sermon Audio Player View Controller-->
+        <scene sceneID="fO0-ga-8TL">
+            <objects>
+                <viewController id="htt-sB-Z8I" customClass="SermonAudioPlayerViewController" customModule="SGBC_REMODEL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D6d-Nv-v6F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lSI-8n-FK8">
+                                <rect key="frame" x="28.5" y="148" width="357" height="341"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="341" id="ZBF-aE-eH9"/>
+                                    <constraint firstAttribute="width" constant="357" id="eoQ-gY-r6T"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qUz-Uq-Z8F">
+                                <rect key="frame" x="141.5" y="88" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SermonTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQr-NB-TsH">
+                                <rect key="frame" x="127.5" y="497" width="159" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="vaO-QS-RhK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PreacherTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osg-rv-a1M">
+                                <rect key="frame" x="136" y="527.5" width="142" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="eWA-Hw-nnP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.02" translatesAutoresizingMaskIntoConstraints="NO" id="NqN-Nq-rgp">
+                                <rect key="frame" x="42" y="566.5" width="330" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="RxN-kA-uMN"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6s-bP-LBa">
+                                <rect key="frame" x="184.5" y="588.5" width="45" height="31"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="sermonPlayButtonPressed:" destination="htt-sB-Z8I" eventType="touchUpInside" id="ORh-XB-fdh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A68-yr-VHi">
+                                <rect key="frame" x="124" y="588.5" width="45" height="31"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gobackward.15" catalog="system"/>
+                                <connections>
+                                    <action selector="sermonRewindButtonPressed:" destination="htt-sB-Z8I" eventType="touchUpInside" id="BmE-CC-BQ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwk-UM-r3k">
+                                <rect key="frame" x="251" y="588.5" width="45" height="31"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="goforward.15" catalog="system"/>
+                                <connections>
+                                    <action selector="sermonForwardButtonPressed:" destination="htt-sB-Z8I" eventType="touchUpInside" id="Kil-BY-wxY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAy-qq-eD1">
+                                <rect key="frame" x="68" y="625.5" width="38" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="1x"/>
+                                <connections>
+                                    <action selector="sermonRateButtonPressed:" destination="htt-sB-Z8I" eventType="touchUpInside" id="Ar5-hu-4SF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCS-MV-dm7">
+                                <rect key="frame" x="323" y="625.5" width="37" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="..."/>
+                                <connections>
+                                    <action selector="sermonOptionButtonPressed:" destination="htt-sB-Z8I" eventType="touchUpInside" id="die-pM-19H"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YVh-5H-Xc5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A68-yr-VHi" firstAttribute="centerY" secondItem="z6s-bP-LBa" secondAttribute="centerY" id="3VZ-0d-ghd"/>
+                            <constraint firstItem="YVh-5H-Xc5" firstAttribute="trailing" secondItem="GCS-MV-dm7" secondAttribute="trailing" constant="54" id="3u3-QC-2dv"/>
+                            <constraint firstItem="GCS-MV-dm7" firstAttribute="top" secondItem="Jwk-UM-r3k" secondAttribute="bottom" constant="6" id="4jB-L8-7wn"/>
+                            <constraint firstItem="NqN-Nq-rgp" firstAttribute="centerX" secondItem="osg-rv-a1M" secondAttribute="centerX" id="5g2-XL-Cyh"/>
+                            <constraint firstItem="HAy-qq-eD1" firstAttribute="top" secondItem="A68-yr-VHi" secondAttribute="bottom" constant="6" id="61G-WY-UDV"/>
+                            <constraint firstItem="lSI-8n-FK8" firstAttribute="centerX" secondItem="D6d-Nv-v6F" secondAttribute="centerX" id="9bT-aY-7ck"/>
+                            <constraint firstItem="YVh-5H-Xc5" firstAttribute="trailing" secondItem="Jwk-UM-r3k" secondAttribute="trailing" constant="118" id="BZe-Ty-GIh"/>
+                            <constraint firstItem="QQr-NB-TsH" firstAttribute="centerX" secondItem="lSI-8n-FK8" secondAttribute="centerX" id="CTj-Q4-AiU"/>
+                            <constraint firstItem="QQr-NB-TsH" firstAttribute="top" secondItem="lSI-8n-FK8" secondAttribute="bottom" constant="8" symbolic="YES" id="KTN-CL-Kf8"/>
+                            <constraint firstItem="qUz-Uq-Z8F" firstAttribute="top" secondItem="YVh-5H-Xc5" secondAttribute="top" id="PH8-06-p0m"/>
+                            <constraint firstItem="YVh-5H-Xc5" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HAy-qq-eD1" secondAttribute="trailing" symbolic="YES" id="WwL-8O-m2n"/>
+                            <constraint firstItem="z6s-bP-LBa" firstAttribute="centerX" secondItem="NqN-Nq-rgp" secondAttribute="centerX" id="Xc4-Qn-cQq"/>
+                            <constraint firstItem="z6s-bP-LBa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="A68-yr-VHi" secondAttribute="trailing" constant="8" symbolic="YES" id="YBQ-1T-doi"/>
+                            <constraint firstItem="osg-rv-a1M" firstAttribute="centerX" secondItem="QQr-NB-TsH" secondAttribute="centerX" id="bYf-up-rEa"/>
+                            <constraint firstItem="Jwk-UM-r3k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="z6s-bP-LBa" secondAttribute="trailing" constant="8" symbolic="YES" id="boH-sa-dZe"/>
+                            <constraint firstItem="A68-yr-VHi" firstAttribute="leading" secondItem="YVh-5H-Xc5" secondAttribute="leading" constant="124" id="ehs-yZ-3ni"/>
+                            <constraint firstItem="HAy-qq-eD1" firstAttribute="leading" secondItem="YVh-5H-Xc5" secondAttribute="leading" constant="68" id="fgo-dA-g3M"/>
+                            <constraint firstItem="qUz-Uq-Z8F" firstAttribute="centerX" secondItem="D6d-Nv-v6F" secondAttribute="centerX" id="ihU-yX-RV3"/>
+                            <constraint firstItem="Jwk-UM-r3k" firstAttribute="centerY" secondItem="z6s-bP-LBa" secondAttribute="centerY" id="io6-qv-JJC"/>
+                            <constraint firstItem="GCS-MV-dm7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HAy-qq-eD1" secondAttribute="trailing" constant="8" symbolic="YES" id="j3V-Nr-7MB"/>
+                            <constraint firstItem="z6s-bP-LBa" firstAttribute="top" secondItem="NqN-Nq-rgp" secondAttribute="bottom" constant="18" id="o9H-ee-8Hb"/>
+                            <constraint firstItem="osg-rv-a1M" firstAttribute="top" secondItem="QQr-NB-TsH" secondAttribute="bottom" constant="7.5" id="qFZ-WV-xjI"/>
+                            <constraint firstItem="NqN-Nq-rgp" firstAttribute="top" secondItem="osg-rv-a1M" secondAttribute="bottom" constant="18.5" id="rf5-Rf-5Rc"/>
+                            <constraint firstItem="lSI-8n-FK8" firstAttribute="top" secondItem="qUz-Uq-Z8F" secondAttribute="bottom" constant="29" id="wUD-y5-LaI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nha-Q4-GCI"/>
+                    <connections>
+                        <outlet property="preacherTitleLabel" destination="osg-rv-a1M" id="dTJ-9X-Rd9"/>
+                        <outlet property="sermonImageView" destination="lSI-8n-FK8" id="5eS-bP-rSN"/>
+                        <outlet property="sermonPlayButton" destination="z6s-bP-LBa" id="prv-hk-co7"/>
+                        <outlet property="sermonProgressView" destination="NqN-Nq-rgp" id="QMC-hT-4sf"/>
+                        <outlet property="sermonTitleLabel" destination="QQr-NB-TsH" id="VpJ-Vh-ADL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovU-xF-sJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3471.0144927536235" y="705.80357142857144"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gobackward.15" catalog="system" width="121" height="128"/>
+        <image name="goforward.15" catalog="system" width="121" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="play.rectangle" catalog="system" width="128" height="93"/>
+        <image name="sermonsimage" width="750" height="262"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
