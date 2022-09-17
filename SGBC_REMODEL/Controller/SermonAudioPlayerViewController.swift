@@ -36,12 +36,11 @@ class SermonAudioPlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        changeUIOnButtonClick()
         try! AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
         try! AVAudioSession.sharedInstance().setActive(true)
         
         sermonProgressSlider.isHidden = true
-        changeUIOnButtonClick()
-       
         currentURL = sermonAudioURL
         sermonTitleLabel.text = sermonTitle
         preacherTitleLabel.text = preacherTitle
@@ -57,6 +56,7 @@ class SermonAudioPlayerViewController: UIViewController {
         
         globalAudioPlayer.event.stateChange.addListener(self, handleAudioPlayerStateChange)
         globalAudioPlayer.event.updateDuration.addListener(self, handleAudioPlayerTimeEvent)
+        
     }
     
     
@@ -143,6 +143,7 @@ class SermonAudioPlayerViewController: UIViewController {
             loadAudio()
             globalPlayerURL = currentURL
             globalAudioPlayer.play()
+    
         }
         else if globalPlayerState == .paused && globalPlayerURL != currentURL{
             //print("Audio has been changed because of different row click with previous audio paused and is now playing new audio")
@@ -150,10 +151,9 @@ class SermonAudioPlayerViewController: UIViewController {
             loadAudio()
             globalPlayerURL = currentURL
             globalAudioPlayer.play()
+
         }
-        
-        globalAudioPlayer.nowPlayingInfoController.set(keyValue: NowPlayingInfoProperty.isLiveStream(true))
-       
+            
 
     }
     
@@ -168,25 +168,30 @@ class SermonAudioPlayerViewController: UIViewController {
                 hours += 1
             }
             
-            // sort this countdown issue later
-            self.startButtonLabel.text = "\(String(format: "%.0f",hours)).\(String(format: "%.0f",minutes)).\(secondsLeft)"
-            self.endButtonLabel.text = String(format: "%.0f", (Float(globalAudioPlayer.duration)/60)) + "." + String(Float(Int(globalAudioPlayer.duration)%60))
-            
+            func updateTimer(){
+                // sort this countdown issue later
+                self.startButtonLabel.text = "\(String(format: "%.0f",hours)).\(String(format: "%.0f",minutes)).\(secondsLeft)"
+                self.endButtonLabel.text = String(format: "%.0f", (Float(globalAudioPlayer.duration)/60)) + "." + String(Float(Int(globalAudioPlayer.duration)%60))
+            }
             
             
             if globalPlayerURL == currentURL{
                 self.sermonProgressView.setProgress(Float(globalAudioPlayer.currentTime/globalAudioPlayer.duration), animated: true)
+                updateTimer()
             }
             else{
                 self.sermonPlayButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
             }
             if globalAudioPlayer.rate == 2.0 && globalPlayerURL == currentURL{
                 self.sermonRateButton.setTitle("2X", for: .normal)
+                updateTimer()
             }
             else{
                 self.sermonRateButton.setTitle("1X", for: .normal)
             }
-            globalAudioPlayer.updateNowPlayingPlaybackValues()
+            
+            
+            
         }
     }
     
@@ -199,13 +204,11 @@ class SermonAudioPlayerViewController: UIViewController {
         if globalAudioPlayer.rate == 1.0 {
             DispatchQueue.main.async {
                 globalAudioPlayer.rate = 2.0
-                globalAudioPlayer.updateNowPlayingPlaybackValues()
             }
         }
         else{
             DispatchQueue.main.async {
             globalAudioPlayer.rate = 1.0
-            globalAudioPlayer.updateNowPlayingPlaybackValues()
             }
         }
     }
