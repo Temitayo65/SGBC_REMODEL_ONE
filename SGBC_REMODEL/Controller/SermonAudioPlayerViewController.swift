@@ -13,6 +13,10 @@ public var globalPlayerURL: String = ""
 public var globalPlayerState: AudioPlayerState = .idle
 public var globalAudioPlayer = AudioPlayer()
 
+// for later
+public var globalVideoURL: String = ""
+
+
 class SermonAudioPlayerViewController: UIViewController {
     
     var sermonImageURL: String?
@@ -47,8 +51,8 @@ class SermonAudioPlayerViewController: UIViewController {
     
     // make the videoPath url be a property sent from the previous view controller
     // i.e videoPathURL: String!
-    // then let videoPath = videoPathURL or just use it directly in your code 
-     let videoPath = "https://rr4---sn-a5mekn6r.googlevideo.com/videoplayback?expire=1663442210&ei=wcglY-SJOoT6kgags4XwBA&ip=207.204.228.190&id=o-AHO1hmDRBfExpVzVT-WlzYcIsjMCypmJYjlF2EIVllXE&itag=22&source=youtube&requiressl=yes&mh=Il&mm=31%2C26&mn=sn-a5mekn6r%2Csn-o097znsr&ms=au%2Conr&mv=m&mvi=4&pl=24&initcwndbps=1253750&spc=yR2vp-bJOqkikZoZaCsecV6d7C0vyJI&vprv=1&mime=video%2Fmp4&ns=Le8uz2Rrg-DOc1ITdhQPAhII&cnr=14&ratebypass=yes&dur=3770.293&lmt=1663008251179537&mt=1663420146&fvip=3&fexp=24001373%2C24007246&c=WEB&rbqsm=fr&txp=7211224&n=TPwd6OxT9cDQsw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgat3JJKrwxPyVpW_qzsgR-UgdCEfqsNHJ4tBNifo9uOICIQCYVD_wdieyNDvlx9QPM_LDxQQLFPfoM8H71jCCkmlKgw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRAIgFrsfSsVNb-FY-bC4clrTKgINpR2734DZLWmkA-M0BxICIGV3arf_Em1vFWXYnr59Ypt5V9QoA2VXigkJ0kFu-avW&title=Pastor%20Osagie%20Azeta%20%7C%20The%20Treasure%20of%20Knowing%20Christ%20(Colossians%202%3A1-3)"
+    // then let videoPath = videoPathURL or just use it directly in your code
+     let videoPath = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     
     let playerViewController = AVPlayerViewController()
     var vplayer = AVPlayer()
@@ -58,6 +62,7 @@ class SermonAudioPlayerViewController: UIViewController {
         super.viewDidLoad()
         // For Video
         guard let url = URL(string: videoPath) else { return }
+        globalVideoURL = videoPath
         vplayer = AVPlayer(url: url)
         vplayer.rate = 1 //auto play
         let playerFrame = CGRect(x: 10 , y: view.frame.height / 6.2, width: view.frame.width-20, height: view.frame.height/3)
@@ -92,13 +97,28 @@ class SermonAudioPlayerViewController: UIViewController {
         globalAudioPlayer.event.updateDuration.addListener(self, handleAudioPlayerTimeEvent)
         
     }
+    
+    // re-write this also when you have enough data from an api 
     override func viewWillDisappear(_ animated: Bool) {
         if #available(iOS 16.0, *) {
             vplayer.pause()
-            vplayer.replaceCurrentItem(with: AVPlayerItem(url: URL(filePath: "")))
+            //vplayer.replaceCurrentItem(with: AVPlayerItem(url: URL(filePath: "")))
         } else {
             // Fallback on earlier versions
         }
+    }
+    
+    // re-write this when you have enough data from an api
+    override func viewWillAppear(_ animated: Bool) {
+            if #available(iOS 16.0, *) {
+                if globalVideoURL != videoPath{
+                    vplayer.replaceCurrentItem(with: AVPlayerItem(url: URL(filePath: "")))
+                    vplayer.replaceCurrentItem(with: AVPlayerItem(url: URL(filePath: videoPath)))
+                }
+            } else {
+                // Fallback on earlier versions
+                
+            }
     }
     
     

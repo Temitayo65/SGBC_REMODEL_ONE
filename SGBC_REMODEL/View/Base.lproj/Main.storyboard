@@ -423,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovU-xF-sJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3471.0144927536235" y="705.80357142857144"/>
+            <point key="canvasLocation" x="3484" y="698"/>
         </scene>
         <!--Hymn Table View Controller-->
         <scene sceneID="7jQ-vu-Sgc">
@@ -476,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxz-fl-g37" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2961" y="1408"/>
+            <point key="canvasLocation" x="2680" y="1444"/>
         </scene>
     </scenes>
     <resources>
