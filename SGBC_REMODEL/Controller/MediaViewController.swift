@@ -10,8 +10,8 @@ import UIKit
 class MediaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
-    var mediaTableViewGroups: [String] = ["sermons", "podcasts", "radio", "blogs"]
-    var mediaTableViewGroupsTitle: [String] = ["Sermons", "Podcasts", "Radio", "Blogs"]
+    var mediaTableViewGroups: [String] = ["sermons", "podcasts", "radio", "blogs", "sermons"]
+    var mediaTableViewGroupsTitle: [String] = ["Sermons", "Podcasts", "Radio", "Blogs", "Hymns"]
     @IBOutlet var MediaTableView: UITableView!
     
     override func viewDidLoad() {
@@ -45,7 +45,12 @@ class MediaViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "sermonsSegue", sender: self)
+        if indexPath.row == 0 {
+            performSegue(withIdentifier: "sermonsSegue", sender: self)
+        }
+        if indexPath.row == 4{
+            performSegue(withIdentifier: "hymns", sender: self)
+        }
     }
     
 }

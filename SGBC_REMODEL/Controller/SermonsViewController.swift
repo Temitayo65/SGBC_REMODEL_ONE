@@ -23,6 +23,7 @@ class SermonsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet var recentSermonsTableView: UITableView!
     
+    
     let refreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,9 +110,10 @@ class SermonsViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "playAudio"{
             let vc = segue.destination as! SermonAudioPlayerViewController
-            vc.sermonImageURL = sermons[currentIndexPath].sermonImage?.image_url ?? "Nothing here"
+            vc.sermonImageURL = sermons[currentIndexPath].sermonImage?.image_url ?? "https://sgbc.ams3.digitaloceanspaces.com/Images/March-2021/The-Obedience-of-the-Last-Adam.jpg?AWSAccessKeyId=C663TNSAPB6NR24LMYTF&Expires=1663281102&Signature=P9bexmZq%2FHpPJeWK6BnVPTBnHcQ%3D"
             vc.preacherTitle = sermons[currentIndexPath].sermonPastor.first_name + " " + sermons[currentIndexPath].sermonPastor.last_name
             vc.sermonTitle = sermons[currentIndexPath].title
+            vc.sermonAudioURL = sermons[currentIndexPath].sermonAudio.audio_url
             
         }
     }
