@@ -275,6 +275,9 @@
                                     <segment title="Audio"/>
                                     <segment title="Video"/>
                                 </segments>
+                                <connections>
+                                    <action selector="audioVideoControlClicked:" destination="htt-sB-Z8I" eventType="valueChanged" id="rzq-ZO-xK8"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SermonTitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQr-NB-TsH">
                                 <rect key="frame" x="10" y="460" width="394" height="23"/>
@@ -403,14 +406,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="nha-Q4-GCI"/>
                     <connections>
+                        <outlet property="audioVideoSegmentedControl" destination="qUz-Uq-Z8F" id="vpU-3w-5Nn"/>
                         <outlet property="endButtonLabel" destination="dLs-SH-p1m" id="Smc-Lo-qo5"/>
                         <outlet property="preacherTitleLabel" destination="osg-rv-a1M" id="dTJ-9X-Rd9"/>
+                        <outlet property="sermonForwardButton" destination="Jwk-UM-r3k" id="loL-Bc-PdL"/>
                         <outlet property="sermonImageView" destination="lSI-8n-FK8" id="5eS-bP-rSN"/>
                         <outlet property="sermonOptionsButton" destination="GCS-MV-dm7" id="D1L-CC-t1X"/>
                         <outlet property="sermonPlayButton" destination="z6s-bP-LBa" id="prv-hk-co7"/>
                         <outlet property="sermonProgressSlider" destination="X8c-Ya-KZz" id="YnE-Bz-l28"/>
                         <outlet property="sermonProgressView" destination="NqN-Nq-rgp" id="QMC-hT-4sf"/>
                         <outlet property="sermonRateButton" destination="HAy-qq-eD1" id="WVo-PF-mes"/>
+                        <outlet property="sermonRewindButton" destination="A68-yr-VHi" id="TSw-rX-qFG"/>
                         <outlet property="sermonTitleLabel" destination="QQr-NB-TsH" id="VpJ-Vh-ADL"/>
                         <outlet property="startButtonLabel" destination="0gf-lr-2Zd" id="b1L-Mj-Bg4"/>
                     </connections>

@@ -870,6 +870,7 @@
 		841C886228D57E5200171827 /* Hymn 670.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 841C850528D57E5200171827 /* Hymn 670.pdf */; };
 		841C886328D57E5200171827 /* Hymn 102.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 841C850628D57E5200171827 /* Hymn 102.pdf */; };
 		841C886428D57E5200171827 /* Hymn 664.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 841C850728D57E5200171827 /* Hymn 664.pdf */; };
+		8438A2D028D58940009F8204 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A2CF28D58940009F8204 /* PlayPauseButton.swift */; };
 		84BFBDCF28D0B71C001709F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDCE28D0B71C001709F0 /* AppDelegate.swift */; };
 		84BFBDD128D0B71C001709F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDD028D0B71C001709F0 /* SceneDelegate.swift */; };
 		84BFBDD328D0B71C001709F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDD228D0B71C001709F0 /* MainViewController.swift */; };
@@ -1756,6 +1757,7 @@
 		841C850528D57E5200171827 /* Hymn 670.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Hymn 670.pdf"; sourceTree = "<group>"; };
 		841C850628D57E5200171827 /* Hymn 102.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Hymn 102.pdf"; sourceTree = "<group>"; };
 		841C850728D57E5200171827 /* Hymn 664.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Hymn 664.pdf"; sourceTree = "<group>"; };
+		8438A2CF28D58940009F8204 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 		84BFBDCB28D0B71C001709F0 /* SGBC_REMODEL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGBC_REMODEL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFBDCE28D0B71C001709F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BFBDD028D0B71C001709F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -2734,6 +2736,7 @@
 				84BFBDF328D11336001709F0 /* MediaTableViewCell.xib */,
 				84BFBDFA28D136D5001709F0 /* RecentSermonTableViewCell.swift */,
 				84BFBDFB28D136D5001709F0 /* RecentSermonTableViewCell.xib */,
+				8438A2CF28D58940009F8204 /* PlayPauseButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3749,6 +3752,7 @@
 				84BFBDF728D12B7B001709F0 /* SermonsViewController.swift in Sources */,
 				841C743028D560E800171827 /* WebViewController.swift in Sources */,
 				84BFBDED28D1067C001709F0 /* Sermons.swift in Sources */,
+				8438A2D028D58940009F8204 /* PlayPauseButton.swift in Sources */,
 				841C743228D5615800171827 /* HymnTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
