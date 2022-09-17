@@ -28,7 +28,6 @@ class HymnTableViewController: UITableViewController{
         }
         
         // Refactor this sorting later
-        
         hymns.sort{first, second in
             var final_string = slice(first, from: " ", to: ".")!
             var before_final: String = ""
