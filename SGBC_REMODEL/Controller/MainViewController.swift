@@ -16,6 +16,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // hiding the navigation bar
+        navigationController?.navigationBar.isHidden = true
+        
         MainTableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "mainidentifier")
         MainTableView.delegate = self
         MainTableView.dataSource = self
@@ -24,7 +27,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
         tabBarController?.tabBar.isHidden = false
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +50,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if mainTableViewGroups[indexPath.row] == "leadership"{
+            performSegue(withIdentifier: "leadershipidentifier", sender: self)
+        }
+        else if mainTableViewGroups[indexPath.row] == "about"{
+            performSegue(withIdentifier: "aboutidentifier", sender: self)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(160)
     }
@@ -49,3 +67,34 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 }
 
+
+// Including the slice function just created in all view controller instances 
+extension UIViewController{
+    func slice(_ string: String, from startingIndex: Int, to endIndex: Int) -> String {
+        let chosenString = string
+        var start = chosenString.startIndex
+        if start.hashValue != 0{
+            start = chosenString.index(start, offsetBy: startingIndex)
+        }
+        let end = chosenString.index(start, offsetBy: endIndex)
+        return String(chosenString[start...end])
+    }
+    
+    func slice(_ string: String, from startingIndex: Int, to character: Character) -> String? {
+        let chosenString = string
+        var start = chosenString.startIndex
+        if start.hashValue != 0{
+            start = chosenString.index(start, offsetBy: startingIndex)
+        }
+        guard let end = chosenString.firstIndex(of: character)else{ return nil}
+        return String(chosenString[start..<end])
+    }
+
+    func slice(_ string: String, from character: Character, to secondCharacter: Character) -> String? {
+        let chosenString = string
+        var start = chosenString.firstIndex(of: character)!
+        start = chosenString.index(start, offsetBy: 1)
+        guard let end = chosenString.firstIndex(of: secondCharacter)else{ return nil}
+        return String(chosenString[start..<end])
+    }
+}

@@ -8,13 +8,24 @@
 import UIKit
 import WebKit
 
-class HymnTableViewController: UITableViewController{
+class HymnTableViewController: UITableViewController, UISearchBarDelegate{
 
+    
     var webView: WKWebView!
     var hymns = [String]()
     
+    
+    // For search bar
+    //    var unaffectedHymns = [String]()
+    //    var filteredHymns = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // adding a search bar
+        //        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: view.frame.width - 5, height: 30))
+        //        searchBar.delegate = self
+        //        tableView.addSubview(searchBar)
+        
         tabBarController?.tabBar.isHidden = true
         title = "Psalms & Hymns"
         let fm = FileManager.default
@@ -26,9 +37,13 @@ class HymnTableViewController: UITableViewController{
                 hymns.append(item)
             }
         }
-        
-        // Refactor this sorting later
-        hymns.sort{first, second in
+        sortHymn(hymnList: &self.hymns, ascendingOrder: true)
+
+    }
+    
+    // Refactor this sorting later
+    func sortHymn(hymnList hymn: inout [String], ascendingOrder order: Bool){
+        hymn.sort{first, second in
             var final_string = slice(first, from: " ", to: ".")!
             var before_final: String = ""
             // checking for versions and enabling sort with version for the end ®
@@ -61,13 +76,11 @@ class HymnTableViewController: UITableViewController{
             
             // To sort by the first number if the hymn numbers are different and don't contain versions or
             // if there are versions
-            return Int(final_string)! < Int(final_string2)!
+            if order {
+                return Int(final_string)! < Int(final_string2)!
+            }
+            else{return Int(final_string)! > Int(final_string2)! }
         }
-        // print(hymns)
-        
-        // Trying to add a search feature...
- 
-
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -94,32 +107,4 @@ class HymnTableViewController: UITableViewController{
         navigationController?.pushViewController(vc, animated: true)
     }
 
-    func slice(_ string: String, from startingIndex: Int, to endIndex: Int) -> String {
-        let chosenString = string
-        var start = chosenString.startIndex
-        if start.hashValue != 0{
-            start = chosenString.index(start, offsetBy: startingIndex)
-        }
-        let end = chosenString.index(start, offsetBy: endIndex)
-        return String(chosenString[start...end])
-    }
-    
-    func slice(_ string: String, from startingIndex: Int, to character: Character) -> String? {
-        let chosenString = string
-        var start = chosenString.startIndex
-        if start.hashValue != 0{
-            start = chosenString.index(start, offsetBy: startingIndex)
-        }
-        guard let end = chosenString.firstIndex(of: character)else{ return nil}
-        return String(chosenString[start..<end])
-    }
-
-    func slice(_ string: String, from character: Character, to secondCharacter: Character) -> String? {
-        let chosenString = string
-        var start = chosenString.firstIndex(of: character)!
-        start = chosenString.index(start, offsetBy: 1)
-        guard let end = chosenString.firstIndex(of: secondCharacter)else{ return nil}
-        return String(chosenString[start..<end])
-    }
-    
 }

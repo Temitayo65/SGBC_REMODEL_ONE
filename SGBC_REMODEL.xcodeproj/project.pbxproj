@@ -871,6 +871,9 @@
 		841C886328D57E5200171827 /* Hymn 102.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 841C850628D57E5200171827 /* Hymn 102.pdf */; };
 		841C886428D57E5200171827 /* Hymn 664.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 841C850728D57E5200171827 /* Hymn 664.pdf */; };
 		8438A2D028D58940009F8204 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8438A2CF28D58940009F8204 /* PlayPauseButton.swift */; };
+		84A0C40828D91BE300E89D3A /* LeadershipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0C40728D91BE300E89D3A /* LeadershipViewController.swift */; };
+		84A0C40B28D91C1600E89D3A /* LeadershipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0C40928D91C1600E89D3A /* LeadershipCollectionViewCell.swift */; };
+		84A0C40C28D91C1600E89D3A /* LeadershipCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A0C40A28D91C1600E89D3A /* LeadershipCollectionViewCell.xib */; };
 		84BFBDCF28D0B71C001709F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDCE28D0B71C001709F0 /* AppDelegate.swift */; };
 		84BFBDD128D0B71C001709F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDD028D0B71C001709F0 /* SceneDelegate.swift */; };
 		84BFBDD328D0B71C001709F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDD228D0B71C001709F0 /* MainViewController.swift */; };
@@ -889,6 +892,10 @@
 		84BFBDFC28D136D5001709F0 /* RecentSermonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDFA28D136D5001709F0 /* RecentSermonTableViewCell.swift */; };
 		84BFBDFD28D136D5001709F0 /* RecentSermonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BFBDFB28D136D5001709F0 /* RecentSermonTableViewCell.xib */; };
 		84BFBDFF28D152B9001709F0 /* SermonAudioPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFBDFE28D152B9001709F0 /* SermonAudioPlayerViewController.swift */; };
+		84EF489128D925B500E20B9E /* Leader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF489028D925B500E20B9E /* Leader.swift */; };
+		84F8E3B228D9D9150063A875 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8E3B128D9D9150063A875 /* AboutTableViewController.swift */; };
+		84F8E3B528D9DBAD0063A875 /* AboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8E3B328D9DBAD0063A875 /* AboutTableViewCell.swift */; };
+		84F8E3B628D9DBAD0063A875 /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F8E3B428D9DBAD0063A875 /* AboutTableViewCell.xib */; };
 		8E97CD2C004AD3376D219CB6 /* Pods_SGBC_REMODEL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 995885F5964B1464CBD18E52 /* Pods_SGBC_REMODEL.framework */; };
 /* End PBXBuildFile section */
 
@@ -1758,6 +1765,9 @@
 		841C850628D57E5200171827 /* Hymn 102.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Hymn 102.pdf"; sourceTree = "<group>"; };
 		841C850728D57E5200171827 /* Hymn 664.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Hymn 664.pdf"; sourceTree = "<group>"; };
 		8438A2CF28D58940009F8204 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
+		84A0C40728D91BE300E89D3A /* LeadershipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadershipViewController.swift; sourceTree = "<group>"; };
+		84A0C40928D91C1600E89D3A /* LeadershipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadershipCollectionViewCell.swift; sourceTree = "<group>"; };
+		84A0C40A28D91C1600E89D3A /* LeadershipCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeadershipCollectionViewCell.xib; sourceTree = "<group>"; };
 		84BFBDCB28D0B71C001709F0 /* SGBC_REMODEL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGBC_REMODEL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFBDCE28D0B71C001709F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BFBDD028D0B71C001709F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1778,6 +1788,10 @@
 		84BFBDFA28D136D5001709F0 /* RecentSermonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSermonTableViewCell.swift; sourceTree = "<group>"; };
 		84BFBDFB28D136D5001709F0 /* RecentSermonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentSermonTableViewCell.xib; sourceTree = "<group>"; };
 		84BFBDFE28D152B9001709F0 /* SermonAudioPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonAudioPlayerViewController.swift; sourceTree = "<group>"; };
+		84EF489028D925B500E20B9E /* Leader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leader.swift; sourceTree = "<group>"; };
+		84F8E3B128D9D9150063A875 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		84F8E3B328D9DBAD0063A875 /* AboutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewCell.swift; sourceTree = "<group>"; };
+		84F8E3B428D9DBAD0063A875 /* AboutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTableViewCell.xib; sourceTree = "<group>"; };
 		995885F5964B1464CBD18E52 /* Pods_SGBC_REMODEL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGBC_REMODEL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F63A39FAE9E646C122D842 /* Pods-SGBC_REMODEL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGBC_REMODEL.debug.xcconfig"; path = "Target Support Files/Pods-SGBC_REMODEL/Pods-SGBC_REMODEL.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -2720,6 +2734,8 @@
 				84BFBDF028D110E7001709F0 /* MediaViewController.swift */,
 				84BFBDF628D12B7B001709F0 /* SermonsViewController.swift */,
 				84BFBDFE28D152B9001709F0 /* SermonAudioPlayerViewController.swift */,
+				84A0C40728D91BE300E89D3A /* LeadershipViewController.swift */,
+				84F8E3B128D9D9150063A875 /* AboutTableViewController.swift */,
 				841C743128D5615800171827 /* HymnTableViewController.swift */,
 				841C742F28D560E800171827 /* WebViewController.swift */,
 			);
@@ -2737,6 +2753,10 @@
 				84BFBDFA28D136D5001709F0 /* RecentSermonTableViewCell.swift */,
 				84BFBDFB28D136D5001709F0 /* RecentSermonTableViewCell.xib */,
 				8438A2CF28D58940009F8204 /* PlayPauseButton.swift */,
+				84A0C40928D91C1600E89D3A /* LeadershipCollectionViewCell.swift */,
+				84A0C40A28D91C1600E89D3A /* LeadershipCollectionViewCell.xib */,
+				84F8E3B328D9DBAD0063A875 /* AboutTableViewCell.swift */,
+				84F8E3B428D9DBAD0063A875 /* AboutTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2746,6 +2766,7 @@
 			children = (
 				84BFBDCE28D0B71C001709F0 /* AppDelegate.swift */,
 				84BFBDD028D0B71C001709F0 /* SceneDelegate.swift */,
+				84EF489028D925B500E20B9E /* Leader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3493,6 +3514,7 @@
 				841C881628D57E5200171827 /* Hymn 104 1.pdf in Resources */,
 				841C875728D57E5200171827 /* Hymn 46 2.pdf in Resources */,
 				841C866528D57E5200171827 /* Hymn 436.pdf in Resources */,
+				84F8E3B628D9DBAD0063A875 /* AboutTableViewCell.xib in Resources */,
 				841C85CF28D57E5200171827 /* Hymn 678.pdf in Resources */,
 				841C880E28D57E5200171827 /* Hymn 45 3.pdf in Resources */,
 				841C877128D57E5200171827 /* Hymn 558.pdf in Resources */,
@@ -3642,6 +3664,7 @@
 				841C868028D57E5200171827 /* Hymn 426.pdf in Resources */,
 				841C85F528D57E5200171827 /* Hymn 119 16.pdf in Resources */,
 				84BFBDD628D0B71C001709F0 /* Main.storyboard in Resources */,
+				84A0C40C28D91C1600E89D3A /* LeadershipCollectionViewCell.xib in Resources */,
 				841C857528D57E5200171827 /* Hymn 284.pdf in Resources */,
 				841C86A028D57E5200171827 /* Hymn 619.pdf in Resources */,
 				841C870828D57E5200171827 /* Hymn 172.pdf in Resources */,
@@ -3740,6 +3763,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BFBDD328D0B71C001709F0 /* MainViewController.swift in Sources */,
+				84F8E3B528D9DBAD0063A875 /* AboutTableViewCell.swift in Sources */,
 				84BFBDCF28D0B71C001709F0 /* AppDelegate.swift in Sources */,
 				84BFBDFF28D152B9001709F0 /* SermonAudioPlayerViewController.swift in Sources */,
 				84BFBDFC28D136D5001709F0 /* RecentSermonTableViewCell.swift in Sources */,
@@ -3747,10 +3771,14 @@
 				84BFBDF128D110E7001709F0 /* MediaViewController.swift in Sources */,
 				84BFBDF428D11337001709F0 /* MediaTableViewCell.swift in Sources */,
 				84BFBDE728D0D2A4001709F0 /* MainTableViewCell.swift in Sources */,
+				84A0C40B28D91C1600E89D3A /* LeadershipCollectionViewCell.swift in Sources */,
 				84BFBDD128D0B71C001709F0 /* SceneDelegate.swift in Sources */,
+				84F8E3B228D9D9150063A875 /* AboutTableViewController.swift in Sources */,
+				84A0C40828D91BE300E89D3A /* LeadershipViewController.swift in Sources */,
 				84BFBDEF28D10699001709F0 /* SermonManager.swift in Sources */,
 				84BFBDF728D12B7B001709F0 /* SermonsViewController.swift in Sources */,
 				841C743028D560E800171827 /* WebViewController.swift in Sources */,
+				84EF489128D925B500E20B9E /* Leader.swift in Sources */,
 				84BFBDED28D1067C001709F0 /* Sermons.swift in Sources */,
 				8438A2D028D58940009F8204 /* PlayPauseButton.swift in Sources */,
 				841C743228D5615800171827 /* HymnTableViewController.swift in Sources */,

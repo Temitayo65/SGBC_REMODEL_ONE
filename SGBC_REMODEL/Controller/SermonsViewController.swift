@@ -83,12 +83,16 @@ class SermonsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        sermons.sort { sermon_one, sermon_two in
+        
+        // Sorting sermons by how recent they are
+        sermons.sort {sermon_one, sermon_two in
             sermon_one.date_preached > sermon_two.date_preached
         }
+        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "recentsermonidentifier", for: indexPath) as? RecentSermonTableViewCell{
             cell.RecentSermonTitleLabel.text = sermons[indexPath.row].title
-            cell.RecentSermonDate.text = sermons[indexPath.row].date_preached
+            let sliced_date = slice(sermons[indexPath.row].date_preached, from: 0, to: "T")!
+            cell.RecentSermonDate.text = sliced_date
             cell.RecentSermonImageView.image = UIImage(named: "placeholder")
             cell.RecentSermonPreacherName.text = sermons[indexPath.row].sermonPastor.first_name + " " + sermons[indexPath.row].sermonPastor.last_name
             return cell 
@@ -98,7 +102,7 @@ class SermonsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentIndexPath = indexPath.row
-        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true) // remove selection background when clicked
         performSegue(withIdentifier: "playAudio", sender: self)
     }
     
@@ -125,13 +129,8 @@ class SermonsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 self.recentSermonsTableView.reloadData()
                 self.spinner.stopAnimating()
                 self.refreshControl.endRefreshing()
-                
             }
-            
         }
-        
     }
     
-
-
 }

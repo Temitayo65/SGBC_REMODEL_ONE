@@ -52,7 +52,7 @@ class SermonAudioPlayerViewController: UIViewController {
     // make the videoPath url be a property sent from the previous view controller
     // i.e videoPathURL: String!
     // then let videoPath = videoPathURL or just use it directly in your code
-     let videoPath = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    let videoPath = "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     
     let playerViewController = AVPlayerViewController()
     var vplayer = AVPlayer()
@@ -61,17 +61,17 @@ class SermonAudioPlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // For Video
-        guard let url = URL(string: videoPath) else { return }
-        globalVideoURL = videoPath
-        vplayer = AVPlayer(url: url)
-        vplayer.rate = 1 //auto play
-        let playerFrame = CGRect(x: 10 , y: view.frame.height / 6.2, width: view.frame.width-20, height: view.frame.height/3)
-        playerViewController.player = vplayer
-        playerViewController.view.frame = playerFrame
-        addChild(playerViewController)
-        playPauseButton = PlayPauseButton()
-        playPauseButton.avPlayer = vplayer
-        vplayer.pause()
+            guard let url = URL(string: videoPath) else { return }
+            globalVideoURL = videoPath
+            vplayer = AVPlayer(url: url)
+            vplayer.rate = 1 //auto play
+            let playerFrame = CGRect(x: 10 , y: view.frame.height / 6.2, width: view.frame.width-20, height: view.frame.height/3)
+            playerViewController.player = vplayer
+            playerViewController.view.frame = playerFrame
+            addChild(playerViewController)
+            playPauseButton = PlayPauseButton()
+            playPauseButton.avPlayer = vplayer
+            vplayer.pause()
         
         
         // For audio
@@ -131,6 +131,10 @@ class SermonAudioPlayerViewController: UIViewController {
     @IBAction func audioVideoControlClicked(_ sender: UISegmentedControl) {
         //print(sender.selectedSegmentIndex)
         if sender.selectedSegmentIndex == 1{
+            if globalAudioPlayer.playerState == .playing{
+                globalAudioPlayer.pause()
+                playPauseButton.updateUI()
+            }
             self.hideAndRevealButtons(setTo: true)
             vplayer.play()
             view.addSubview(playerViewController.view)
@@ -140,13 +144,10 @@ class SermonAudioPlayerViewController: UIViewController {
         }
         else {
             self.hideAndRevealButtons(setTo: false)
-            self.sermonImageView.isHidden = false
-            self.sermonProgressSlider.isHidden = false
-            self.playPauseButton.isHidden = false
-            self.sermonRateButton.isHidden = false
             playerViewController.view.removeFromSuperview()
             playPauseButton.removeFromSuperview()
             vplayer.pause()
+            playPauseButton.updateUI()
         }
     }
     

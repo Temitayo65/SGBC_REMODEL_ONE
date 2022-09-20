@@ -16,14 +16,20 @@ class MediaViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         MediaTableView.register(UINib(nibName: "MediaTableViewCell", bundle: nil), forCellReuseIdentifier: "mediaidentifier")
         MediaTableView.delegate = self
         MediaTableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true 
         tabBarController?.tabBar.isHidden = false
 
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
