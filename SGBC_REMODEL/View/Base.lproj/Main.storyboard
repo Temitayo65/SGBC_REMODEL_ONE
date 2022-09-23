@@ -142,7 +142,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AboutCategoryTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlP-w1-lJy">
-                                <rect key="frame" x="91.5" y="60" width="231.5" height="29"/>
+                                <rect key="frame" x="91.5" y="60" width="231" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -316,27 +316,43 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Recent"/>
+                                        <connections>
+                                            <action selector="categoryButtonPressed:" destination="Oab-cC-G6T" eventType="touchUpInside" id="K45-Wf-h6D"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UH9-hH-VMy">
                                         <rect key="frame" x="82.5" y="0.0" width="71.5" height="34.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Series"/>
+                                        <connections>
+                                            <action selector="categoryButtonPressed:" destination="Oab-cC-G6T" eventType="touchUpInside" id="SUh-ze-cJC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcd-wX-j00">
                                         <rect key="frame" x="159" y="0.0" width="71" height="34.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Books"/>
+                                        <connections>
+                                            <action selector="categoryButtonPressed:" destination="Oab-cC-G6T" eventType="touchUpInside" id="z37-2N-O6m"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znC-Xp-ROQ">
                                         <rect key="frame" x="235" y="0.0" width="95" height="34.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Speakers"/>
+                                        <connections>
+                                            <action selector="categoryButtonPressed:" destination="Oab-cC-G6T" eventType="touchUpInside" id="sd9-Hw-vfr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sTW-sF-ubS">
+                                <rect key="frame" x="0.0" y="127.5" width="414" height="768.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8pZ-hE-gT8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -344,10 +360,14 @@
                             <constraint firstItem="raP-7v-D29" firstAttribute="trailing" secondItem="8pZ-hE-gT8" secondAttribute="trailing" id="5fG-R8-cLK"/>
                             <constraint firstItem="gGs-zA-ke4" firstAttribute="top" secondItem="WGi-ta-98a" secondAttribute="top" constant="93" id="PcQ-WW-P8Z"/>
                             <constraint firstItem="raP-7v-D29" firstAttribute="top" secondItem="Ppk-n7-aZO" secondAttribute="bottom" constant="-3.5" id="Uiw-mi-Cda"/>
+                            <constraint firstItem="sTW-sF-ubS" firstAttribute="leading" secondItem="8pZ-hE-gT8" secondAttribute="leading" id="YTi-Ad-BZq"/>
                             <constraint firstItem="gGs-zA-ke4" firstAttribute="centerX" secondItem="WGi-ta-98a" secondAttribute="centerX" id="bSm-1P-unx"/>
                             <constraint firstItem="raP-7v-D29" firstAttribute="leading" secondItem="8pZ-hE-gT8" secondAttribute="leading" id="bgy-9o-Hor"/>
+                            <constraint firstItem="sTW-sF-ubS" firstAttribute="top" secondItem="gGs-zA-ke4" secondAttribute="bottom" id="h94-kU-xIp"/>
                             <constraint firstAttribute="bottom" secondItem="raP-7v-D29" secondAttribute="bottom" id="lgA-9a-hzB"/>
                             <constraint firstItem="Ppk-n7-aZO" firstAttribute="trailing" secondItem="8pZ-hE-gT8" secondAttribute="trailing" id="mj3-UF-Jpa"/>
+                            <constraint firstAttribute="bottom" secondItem="sTW-sF-ubS" secondAttribute="bottom" id="p7a-iP-Mq0"/>
+                            <constraint firstItem="sTW-sF-ubS" firstAttribute="trailing" secondItem="8pZ-hE-gT8" secondAttribute="trailing" id="s5C-Vt-fqQ"/>
                             <constraint firstItem="Ppk-n7-aZO" firstAttribute="top" secondItem="WGi-ta-98a" secondAttribute="top" id="tAL-5X-b6V"/>
                             <constraint firstItem="Ppk-n7-aZO" firstAttribute="leading" secondItem="8pZ-hE-gT8" secondAttribute="leading" id="yYc-Rw-bly"/>
                         </constraints>
@@ -359,6 +379,7 @@
                         <outlet property="recentSermonButton" destination="7dc-LG-ewc" id="vUW-hM-Trn"/>
                         <outlet property="recentSermonsTableView" destination="raP-7v-D29" id="UYC-Qd-QNh"/>
                         <outlet property="seriesSermonButton" destination="UH9-hH-VMy" id="WfL-WH-E0l"/>
+                        <outlet property="sermonByBooksTableView" destination="sTW-sF-ubS" id="OQR-co-UNg"/>
                         <outlet property="speakersSermonButton" destination="znC-Xp-ROQ" id="seE-l3-GDX"/>
                         <outlet property="spinner" destination="xBc-Ar-65X" id="IVO-dJ-Mzy"/>
                         <segue destination="htt-sB-Z8I" kind="show" identifier="playAudio" id="2DB-gm-a6G"/>
